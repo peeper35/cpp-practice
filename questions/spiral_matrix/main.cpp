@@ -5,10 +5,7 @@ using namespace std;
 int main(){
 	vector<vector<int>> V
 	{
-		{1, 2, 3, 99},
-		{4, 5, 6, 98},
-		{7, 8, 9, 97},
-		{10, 11, 12, 96}
+		{1},{2},{3}
 		/*
 			you can change the matrix
 		*/
@@ -38,16 +35,20 @@ int main(){
 			cout << " ";
 		}
 		col--;
-		for(int i = col - 1; i >= start_col; i--){
-			cout << V[row-1][i];
-			cout << " ";
+		if(start_row < row){
+			for(int i = col - 1; i >= start_col; i--){
+				cout << V[row-1][i];
+				cout << " ";
+			}
+			row--;
 		}
-		row--;
-		for(int i = row - 1; i >= start_row; i--){
-			cout << V[i][start_col];
-			cout << " ";		
+		if(start_col < col){
+			for(int i = row - 1; i >= start_row; i--){
+				cout << V[i][start_col];
+				cout << " ";		
+			}
+			start_col++;
 		}
-		start_col++;
 
 	}
 
