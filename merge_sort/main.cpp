@@ -16,7 +16,7 @@ void mergeSort(vector<int> Arr, int start, int end){
 int main(){
 	vector<int> V { 5, 7, 1, 3, 9 };
 	int start = 0;
-	int end = V.size();
+	int end = V.size() - 1;
 	mergeSort(V, start, end);	
 	return 0;
 }
