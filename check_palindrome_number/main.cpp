@@ -20,7 +20,13 @@ int main(){
 	cout << "Enter the number: ";
 	cin >> num;
 	result = get_palindrome(num);
-	cout << "Palindrome of number " << num << " is " << result << endl;
+	cout << "Reverse of number " << num << " is " << result << endl;
 	
+	if(result == num){
+		cout << "Number is palindrome" << endl;
+	} else {
+		cout << "Number is not palindrome" << endl;
+	}
+
 	return 0;
 }
